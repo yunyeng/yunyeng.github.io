@@ -219,23 +219,18 @@
 		</article>
 	</div>
 	<script>
-	function loadJSON(path, success, error)
-{
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function()
-    {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                if (success)
-                    success(JSON.parse(xhr.responseText));
-            } else {
-                if (error)
-                    error(xhr);
-            }
-        }
-    };
-    xhr.open("GET", path, true);
-    xhr.send();
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open('GET', 'article.json', true);
+	xmlhttp.onreadystatechange = function() {
+	    if (xmlhttp.readyState == 4) {
+	        if(xmlhttp.status == 200) {
+	            var obj = JSON.parse(xmlhttp.responseText);
+	            countryList = obj.countrylist;
+	         }
+	    }
+	};
+	var countryList = 'asd';
+	xmlhttp.send(countryList);
 	</script>
 	<script>
 		var newDate = new Date();
