@@ -20,13 +20,37 @@ body {
 	color: #00CC00;
 	font-family: 'lucida_sans_unicoderegular';
 }
+#out-wrapper {
+	width:80%;
+	margin:0 0 0 20px;
+}
+p {
+	font-size:0.9em;
+	text-align: justify;
+}
+hr {
+	display: block; height: 1px;
+    border: 0; border-top: 1px solid #00CC00;
+    margin: 1em 0; padding: 0; 
+}
+h1 {
+	font-size: 1.6em;
+}
+h1 span {
+	font-size: 0.65em;
+}
 pre.logo{
 	font-size:1.3pt;
 }
 p.quote{
-	margin:10px;
+	margin:10px 0 10px 0;
 }
 a{
+	font-style: normal;
+	text-decoration: none;
+	color: #00CC00;
+}
+a:hover{
 	font-style: normal;
 	text-decoration: none;
 	color: #99FF99;
@@ -39,4 +63,10 @@ a:after{
 time{
 	font-size:0.8em;
 	font-style: italic;
+}
+article{
+	margin: 15px 0 15px 0;
+}
+article h4{
+	font-weight: bolder;
 }

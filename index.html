@@ -207,36 +207,35 @@
 #'#++++#+'####+++#####+++#++#+++++#++#+#+#++#+#+++#+#+++++++++#++++#++#+++++#++#++#+#+###++####+#'+++#+#+++##++#+++#++#++++++++#+##+#++++++++'+###+#++++#+##+++#+#++++++#+++++++#++###++++#+++###++#++++
 +++#+++++++++++###+#####++++++#+++#+#+#+'#+#+#+++#+#++#++#+++++++###++++++#+++++#+++#++###+#####+++#+##++++####++++++++++++++++++#+++#+++#+++##+##+++++++#++##+#++++++++#++++++++++###+++++++#+##++##+++
 +#++#+++##+###++#++#####+++++#+#++++#+#++++##++##++#++##++++++'+++++++'#++++++#+##+##+###++####+#++####+'+++##++#++++#+++'#++#++#+++++#++++#+#++####+#+++++#+++++++#+++++++++++#++###+++#+++++###++++++#</pre>
-		<h1>Yunus YEN</h1>
-		<h2>Web Enthusiast</h2>
-		<a href="CV.pdf" title="Résumé" target="_blank">Resume</a>
-		<p class="quote">" Welcome to my page, I will be writing here soon. "</p>
-		<article>
-			<h4>Social Network as Desktop, on <time></time></h4>
-			<p>
-				What if Apple, Linux or Microsoft created a desktop automatically figures out your social network from numerous social media sites, applications, and you can call, text, video chat as an individual and as a group with just buying this pc~tablet device with internet connection? How about a social platform even bigger than these ones nowadays, collecting the big data to even create a bigger data ? Are we gonna become as a singular type people in the near future like in these sci-fi movies, wearing same kind of clotes with same kind of type, look and equipment ? All the information of us in the screen with us as an identity that government, private corporations, media and other big brothers watching us every single second? How are we gonna prevent this? Where is my piece of data being hosted on every application and websites? Arizona? California? Africa? Who is buying and selling my data in the background? Internet is super power, and I truly think this century's gold invention, and it is shame if we gonna use it for bad purposes such as war. We should use this communication invention for good purposes to make world better place. That is why producing millions of devices around it just to connect to it and be in it.
-			</p>
-		</article>
+		<h1>Yunus YEN <span>- Web Enthusiast</span></h1>
+		<a href="CV.pdf" title="Résumé" target="_blank">> Resume</a>
+		<p class="quote">"Hi, I am Software Developer living in San Francisco. I try to share things that are interesting to me."</p>
+		<div id="articles"></div>
 	</div>
+
+
+	<!-------------------- JAVASCRIPT CODE ---------------------->
 	<script>
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open('GET', 'article.json', true);
-	xmlhttp.onreadystatechange = function() {
-	    if (xmlhttp.readyState == 4) {
-	        if(xmlhttp.status == 200) {
-	            var obj = JSON.parse(xmlhttp.responseText);
-	            countryList = obj.countrylist;
-	         }
-	    }
-	};
-	var countryList = 'asd';
-	xmlhttp.send(countryList);
-	</script>
-	<script>
-		var newDate = new Date();
-		//var datetime = "LastSync: " + newDate.today();
-		var time = document.querySelector("time");
-		time.innerHTML = time.innerHTML + new Date().toDateString();
-	</script>
+		var xmlhttp = new XMLHttpRequest();
+		var url = "article.json";
+		xmlhttp.onreadystatechange = function() {
+		    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		        var arr = JSON.parse(xmlhttp.responseText);
+		        toHtml(arr);
+		    }
+		}
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+		function toHtml(arr) {
+			var input = arr.articles;
+		    var output = "";
+		    for(var i = 0; i < input.length; i++) {
+		        output += '<article><h4>'+input[i].title+', on <time>'+input[i].time+'</time></h4><hr><p>'+input[i].content+'</p></article>';
+		    }
+		    var articleDiv = document.querySelector("#articles");
+		    articleDiv.innerHTML = output;
+		}
+		</script>
+		<!-------------------- JAVASCRIPT CODE ---------------------->
 </body>
 </html>
