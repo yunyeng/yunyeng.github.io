@@ -1,0 +1,11 @@
+{
+      "transactionid": "LBS_48550801",
+      "status": 0,
+      "countrylist": 
+    [
+   { "id": 1, "name": "France", "latitude": 37.00039, "longitude": 35.31411, "extent": { "minlatitude": 36.53888499, "minlongitude": 34.76786904, "maxlatitude": 38.37851496, "maxlongitude": 36.40534884 }},
+   { "id": 2, "name": "Germany", "latitude": 37.76454, "longitude": 38.27645, "extent": { "minlatitude": 37.40771898, "minlongitude": 37.43326512, "maxlatitude": 38.21203404, "maxlongitude": 39.24767592 } },
+   { "id": 98, "name": "Belgium", "latitude": 38.75754, "longitude": 30.5387, "extent": { "minlatitude": 37.78126803, "minlongitude": 29.68963308, "maxlatitude": 39.27915099, "maxlongitude": 31.71549708 } },
+   { "id": 99, "name": "England", "latitude": 39.71812, "longitude": 43.03345, "extent": { "minlatitude": 38.96877501, "minlongitude": 42.28340184, "maxlatitude": 40.031208, "maxlongitude": 44.61092892 } },
+    ]
+}

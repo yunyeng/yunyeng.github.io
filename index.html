@@ -210,11 +210,38 @@
 		<h1>Yunus YEN</h1>
 		<h2>Web Enthusiast</h2>
 		<a href="CV.pdf" title="Résumé" target="_blank">Resume</a>
-		<p>Welcome to my page, I will be writing here soon.</p>
+		<p class="quote">" Welcome to my page, I will be writing here soon. "</p>
 		<article>
-			<h4></h4>
-			<p></p>
+			<h4>Explicit Society, on <time></time></h4>
+			<p>
+				
+			</p>
 		</article>
 	</div>
+	<script>
+	function loadJSON(path, success, error)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function()
+    {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                if (success)
+                    success(JSON.parse(xhr.responseText));
+            } else {
+                if (error)
+                    error(xhr);
+            }
+        }
+    };
+    xhr.open("GET", path, true);
+    xhr.send();
+	</script>
+	<script>
+		var newDate = new Date();
+		//var datetime = "LastSync: " + newDate.today();
+		var time = document.querySelector("time");
+		time.innerHTML = time.innerHTML + new Date().toDateString();
+	</script>
 </body>
 </html>
