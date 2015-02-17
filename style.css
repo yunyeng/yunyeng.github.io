@@ -47,6 +47,7 @@ p.quote{
 }
 a{
 	font-style: normal;
+	font-style: italic;
 	text-decoration: none;
 	color: #00CC00;
 }
