@@ -8,7 +8,17 @@
          url('fonts/l_10646-webfont.svg#lucida_sans_unicoderegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
+}
+@font-face {
+    font-family: 'bitwiseregular';
+    src: url('fonts/bitwise-webfont.eot');
+    src: url('fonts/bitwise-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bitwise-webfont.woff2') format('woff2'),
+         url('fonts/bitwise-webfont.woff') format('woff'),
+         url('fonts/bitwise-webfont.ttf') format('truetype'),
+         url('fonts/bitwise-webfont.svg#bitwiseregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 * {
 	padding: 0;
@@ -18,7 +28,7 @@
 body {
 	background: #000000;
 	color: #00CC00;
-	font-family: 'lucida_sans_unicoderegular';
+	font-family: 'bitwiseregular';
 }
 #out-wrapper {
 	width:80%;
