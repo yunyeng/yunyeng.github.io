@@ -12,7 +12,7 @@ function toHtml(arr) {
 	var input = arr.articles;
 	var output = "";
 	for(var i = 0; i < input.length; i++) {
-		output += '<article><h4><strong>'+input[i].title+'</strong>, on <time>'+input[i].time+'</time></h4><hr><p>'+input[i].content+'</p></article>';
+		output += '<article><h3>'+input[i].title+', on <time>'+input[i].time+'</time></h3><hr><p>'+input[i].content+'</p></article>';
 	}
 	var articleDiv = document.querySelector("#articles");
 	articleDiv.innerHTML = output;
