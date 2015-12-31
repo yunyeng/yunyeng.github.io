@@ -50,7 +50,7 @@ h1 span {
 	font-size: 0.65em;
 }
 pre.logo{
-	font-size:1.25pt;
+	font-size:1.24pt;
 }
 p.quote{
 	margin:10px 0 10px 0;
@@ -80,4 +80,9 @@ article{
 }
 article h4{
 	font-weight: bolder;
+	margin:10px 0 10px 0;
+}
+article img{
+	padding:0;
+	margin:5px;
 }
